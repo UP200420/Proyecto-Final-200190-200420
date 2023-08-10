@@ -1,0 +1,16 @@
+version: '3'
+services:
+  database:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: 12122001
+      MYSQL_DATABASE: db
+      MYSQL_PASSWORD: 12122001
+    ports:
+      - "3306:3306"
+    networks:
+      - my_network
+networks:
+  my_network:
+    driver: bridge
